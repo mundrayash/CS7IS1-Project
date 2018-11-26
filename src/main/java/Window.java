@@ -2,13 +2,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
 
 
 public class Window extends JFrame{
-    private String[] questions = {"Nothing for now", "Still nothing"};
+    private String[] questions;
 
-    public Window()
-    {
+    public Window() throws IOException {
         prepareGUI();
     }
 
@@ -16,13 +22,13 @@ public class Window extends JFrame{
         this.setVisible(true);
     }
 
-    private void prepareGUI()
-    {
+
+    private void prepareGUI() throws IOException {
         int windowWidth = 800;
         int windowHeight = 600;
         int margin = 20;
 
-        final JList questionList = new JList(questions);
+        final JList questionList = new JList(getQuestions());
         questionList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         questionList.setVisibleRowCount(0);
         questionList.setSelectedIndex(0);
@@ -61,5 +67,20 @@ public class Window extends JFrame{
         this.getContentPane().add(panel, "Center");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(false);
+    }
+
+    private String[] getQuestions() throws IOException
+    {
+        File directory = new File(getClass().getResource("questions").getFile());
+        File[] files = directory.listFiles();
+
+        Arrays.sort(files);
+        questions = new String[files.length];
+
+        for (int i = 0; i < files.length; i++) {
+            questions[i] = new String(Files.readAllBytes(Paths.get(files[i].getPath())), StandardCharsets.UTF_8);
+        }
+
+        return  questions;
     }
 }
