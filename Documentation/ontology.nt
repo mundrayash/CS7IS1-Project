@@ -1,0 +1,910 @@
+<http://www.fake.com/cs7is1-project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.fake.com/cs7is1-project> <http://purl.org/dc/terms/creator> "Caitriona O'Driscoll" .
+<http://www.fake.com/cs7is1-project> <http://purl.org/dc/terms/creator> "Patrick Meleady" .
+<http://www.fake.com/cs7is1-project> <http://purl.org/dc/terms/creator> "Stephen Kelehan" .
+<http://www.fake.com/cs7is1-project> <http://purl.org/dc/terms/creator> "Yash Mundra" .
+<http://www.fake.com/cs7is1-project> <http://purl.org/dc/terms/description> "Ireland weather station information, with county information along with rainfall and temperature information.Weather Stations have several properties including open year, close year and height. They also have properties named LocatedIn which provides location information in two seperate formats namely Latitude andLongitude and Eastings Northings format." .
+<http://www.fake.com/cs7is1-project> <http://www.w3.org/2000/01/rdf-schema#label> "ireland-weather-station-county" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.fake.com/cs7is1-project#LocatedIn
+<http://www.fake.com/cs7is1-project#LocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#LatLongLocation> .
+<http://www.fake.com/cs7is1-project#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#County> .
+# 
+# http://www.fake.com/cs7is1-project#adjacentTo
+<http://www.fake.com/cs7is1-project#adjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#adjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.fake.com/cs7is1-project#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#GridSquareLocation> .
+<http://www.fake.com/cs7is1-project#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#GridSquareLocation> .
+<http://www.fake.com/cs7is1-project#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies if a grid square is adjacent to another grid square." .
+<http://www.fake.com/cs7is1-project#adjacentTo> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent to" .
+# 
+# http://www.fake.com/cs7is1-project#countyIsNamed
+<http://www.fake.com/cs7is1-project#countyIsNamed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#countyIsNamed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#County> .
+<http://www.fake.com/cs7is1-project#countyIsNamed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#higherThan
+<http://www.fake.com/cs7is1-project#higherThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#higherThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.fake.com/cs7is1-project#higherThan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#higherThan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#higherThan> <http://www.w3.org/2000/01/rdf-schema#comment> "List other stations which this station is higher than." .
+<http://www.fake.com/cs7is1-project#higherThan> <http://www.w3.org/2000/01/rdf-schema#label> "Higher Than" .
+# 
+# http://www.fake.com/cs7is1-project#locatedAt
+<http://www.fake.com/cs7is1-project#locatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#locatedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#locatedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#GridSquareLocation> .
+# 
+# http://www.fake.com/cs7is1-project#lowerThan
+<http://www.fake.com/cs7is1-project#lowerThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#lowerThan> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.fake.com/cs7is1-project#higherThan> .
+<http://www.fake.com/cs7is1-project#lowerThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.fake.com/cs7is1-project#lowerThan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#lowerThan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#lowerThan> <http://www.w3.org/2000/01/rdf-schema#comment> "List other stations which this station is lower than." .
+<http://www.fake.com/cs7is1-project#lowerThan> <http://www.w3.org/2000/01/rdf-schema#label> "Lower Than" .
+# 
+# http://www.fake.com/cs7is1-project#monthRained
+<http://www.fake.com/cs7is1-project#monthRained> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#monthRained> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherRecord> .
+<http://www.fake.com/cs7is1-project#monthRained> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#rainedAt
+<http://www.fake.com/cs7is1-project#rainedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.fake.com/cs7is1-project#rainedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherRecord> .
+<http://www.fake.com/cs7is1-project#rainedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.fake.com/cs7is1-project#GridSquareLocation> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.fake.com/cs7is1-project#LocatedIn
+<http://www.fake.com/cs7is1-project#LocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.fake.com/cs7is1-project#area
+<http://www.fake.com/cs7is1-project#area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#area> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#County> .
+<http://www.fake.com/cs7is1-project#area> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.fake.com/cs7is1-project#area> <http://www.w3.org/2000/01/rdf-schema#comment> "Surface Area of a County" .
+<http://www.fake.com/cs7is1-project#area> <http://www.w3.org/2000/01/rdf-schema#label> "area" .
+# 
+# http://www.fake.com/cs7is1-project#closeYear
+<http://www.fake.com/cs7is1-project#closeYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#closeYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#closeYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.fake.com/cs7is1-project#closeYear> <http://www.w3.org/2000/01/rdf-schema#comment> "Closing Year of Weather Station" .
+<http://www.fake.com/cs7is1-project#closeYear> <http://www.w3.org/2000/01/rdf-schema#label> "close year" .
+# 
+# http://www.fake.com/cs7is1-project#countyIsNamed
+<http://www.fake.com/cs7is1-project#countyIsNamed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.fake.com/cs7is1-project#easting
+<http://www.fake.com/cs7is1-project#easting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#easting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#GridSquareLocation> .
+<http://www.fake.com/cs7is1-project#easting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.fake.com/cs7is1-project#easting> <http://www.w3.org/2000/01/rdf-schema#comment> "Easting location" .
+<http://www.fake.com/cs7is1-project#easting> <http://www.w3.org/2000/01/rdf-schema#label> "easting" .
+# 
+# http://www.fake.com/cs7is1-project#height
+<http://www.fake.com/cs7is1-project#height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#height> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#height> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.fake.com/cs7is1-project#height> <http://www.w3.org/2000/01/rdf-schema#comment> "Geographical elevation of weather station." .
+<http://www.fake.com/cs7is1-project#height> <http://www.w3.org/2000/01/rdf-schema#label> "height" .
+# 
+# http://www.fake.com/cs7is1-project#latitude
+<http://www.fake.com/cs7is1-project#latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#latitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#LatLongLocation> .
+<http://www.fake.com/cs7is1-project#latitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.fake.com/cs7is1-project#latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Geographic latitude" .
+<http://www.fake.com/cs7is1-project#latitude> <http://www.w3.org/2000/01/rdf-schema#label> "latitude" .
+# 
+# http://www.fake.com/cs7is1-project#locatedAt
+<http://www.fake.com/cs7is1-project#locatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.fake.com/cs7is1-project#longitude
+<http://www.fake.com/cs7is1-project#longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#LatLongLocation> .
+<http://www.fake.com/cs7is1-project#longitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.fake.com/cs7is1-project#longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Geographic longitude" .
+<http://www.fake.com/cs7is1-project#longitude> <http://www.w3.org/2000/01/rdf-schema#label> "longitude" .
+# 
+# http://www.fake.com/cs7is1-project#monthRained
+<http://www.fake.com/cs7is1-project#monthRained> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.fake.com/cs7is1-project#northing
+<http://www.fake.com/cs7is1-project#northing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#northing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#GridSquareLocation> .
+<http://www.fake.com/cs7is1-project#northing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.fake.com/cs7is1-project#northing> <http://www.w3.org/2000/01/rdf-schema#comment> "Northing location" .
+<http://www.fake.com/cs7is1-project#northing> <http://www.w3.org/2000/01/rdf-schema#label> "northing" .
+# 
+# http://www.fake.com/cs7is1-project#openYear
+<http://www.fake.com/cs7is1-project#openYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#openYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#openYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.fake.com/cs7is1-project#openYear> <http://www.w3.org/2000/01/rdf-schema#comment> "Opening Year of Weather Station" .
+<http://www.fake.com/cs7is1-project#openYear> <http://www.w3.org/2000/01/rdf-schema#label> "open year" .
+# 
+# http://www.fake.com/cs7is1-project#rainedAt
+<http://www.fake.com/cs7is1-project#rainedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.fake.com/cs7is1-project#rainfall
+<http://www.fake.com/cs7is1-project#rainfall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.fake.com/cs7is1-project#stationName
+<http://www.fake.com/cs7is1-project#stationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#stationName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#stationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.fake.com/cs7is1-project#stationName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of Weather Station" .
+<http://www.fake.com/cs7is1-project#stationName> <http://www.w3.org/2000/01/rdf-schema#label> "station name" .
+# 
+# http://www.fake.com/cs7is1-project#stationNumber
+<http://www.fake.com/cs7is1-project#stationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#stationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#WeatherStation> .
+<http://www.fake.com/cs7is1-project#stationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.fake.com/cs7is1-project#stationNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "ID Number of Weather Station" .
+<http://www.fake.com/cs7is1-project#stationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "station number" .
+# 
+# http://www.fake.com/cs7is1-project#temperatureMax
+<http://www.fake.com/cs7is1-project#temperatureMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#temperatureMax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#TemperatureRecord> .
+<http://www.fake.com/cs7is1-project#temperatureMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.fake.com/cs7is1-project#temperatureMax> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum Temperature measured during timeframe" .
+<http://www.fake.com/cs7is1-project#temperatureMax> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature Maximum" .
+# 
+# http://www.fake.com/cs7is1-project#temperatureMean
+<http://www.fake.com/cs7is1-project#temperatureMean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#temperatureMean> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#TemperatureRecord> .
+<http://www.fake.com/cs7is1-project#temperatureMean> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.fake.com/cs7is1-project#temperatureMean> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean Temperature measured during timeframe" .
+<http://www.fake.com/cs7is1-project#temperatureMean> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature Mean" .
+# 
+# http://www.fake.com/cs7is1-project#temperatureMin
+<http://www.fake.com/cs7is1-project#temperatureMin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.fake.com/cs7is1-project#temperatureMin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.fake.com/cs7is1-project#RainfallRecord> .
+<http://www.fake.com/cs7is1-project#temperatureMin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.fake.com/cs7is1-project#temperatureMin> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean rainfall measured during timeframe" .
+<http://www.fake.com/cs7is1-project#temperatureMin> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum Temperature measured during timeframe" .
+<http://www.fake.com/cs7is1-project#temperatureMin> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature Minimum" .
+<http://www.fake.com/cs7is1-project#temperatureMin> <http://www.w3.org/2000/01/rdf-schema#label> "rainfall" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.fake.com/cs7is1-project#Antrim
+<http://www.fake.com/cs7is1-project#Antrim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Antrim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#April
+<http://www.fake.com/cs7is1-project#April> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#April> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Armagh
+<http://www.fake.com/cs7is1-project#Armagh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Armagh> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#August
+<http://www.fake.com/cs7is1-project#August> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#August> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Carlow
+<http://www.fake.com/cs7is1-project#Carlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Carlow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Cavan
+<http://www.fake.com/cs7is1-project#Cavan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Cavan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Clare
+<http://www.fake.com/cs7is1-project#Clare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Clare> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Cork
+<http://www.fake.com/cs7is1-project#Cork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Cork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#County
+<http://www.fake.com/cs7is1-project#County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#County> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#countyIsNamed> .
+_:genid1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#County> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#area> .
+_:genid2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#County> <http://www.w3.org/2000/01/rdf-schema#comment> "Irish Counties" .
+<http://www.fake.com/cs7is1-project#County> <http://www.w3.org/2000/01/rdf-schema#label> "County" .
+# 
+# http://www.fake.com/cs7is1-project#CountyName
+<http://www.fake.com/cs7is1-project#CountyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#CountyName> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#oneOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Antrim> .
+<http://www.fake.com/cs7is1-project#Antrim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Armagh> .
+<http://www.fake.com/cs7is1-project#Armagh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Carlow> .
+<http://www.fake.com/cs7is1-project#Carlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Cavan> .
+<http://www.fake.com/cs7is1-project#Cavan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Clare> .
+<http://www.fake.com/cs7is1-project#Clare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Cork> .
+<http://www.fake.com/cs7is1-project#Cork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Derry> .
+<http://www.fake.com/cs7is1-project#Derry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Donegal> .
+<http://www.fake.com/cs7is1-project#Donegal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Down> .
+<http://www.fake.com/cs7is1-project#Down> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Dublin> .
+<http://www.fake.com/cs7is1-project#Dublin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Fermanagh> .
+<http://www.fake.com/cs7is1-project#Fermanagh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Galway> .
+<http://www.fake.com/cs7is1-project#Galway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Kerry> .
+<http://www.fake.com/cs7is1-project#Kerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Kildare> .
+<http://www.fake.com/cs7is1-project#Kildare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Kilkenny> .
+<http://www.fake.com/cs7is1-project#Kilkenny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Laois> .
+<http://www.fake.com/cs7is1-project#Laois> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Leitrim> .
+<http://www.fake.com/cs7is1-project#Leitrim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Limerick> .
+<http://www.fake.com/cs7is1-project#Limerick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Longford> .
+<http://www.fake.com/cs7is1-project#Longford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Louth> .
+<http://www.fake.com/cs7is1-project#Louth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Mayo> .
+<http://www.fake.com/cs7is1-project#Mayo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Meath> .
+<http://www.fake.com/cs7is1-project#Meath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Monaghan> .
+<http://www.fake.com/cs7is1-project#Monaghan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Offaly> .
+<http://www.fake.com/cs7is1-project#Offaly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Roscommon> .
+<http://www.fake.com/cs7is1-project#Roscommon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Sligo> .
+<http://www.fake.com/cs7is1-project#Sligo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Tipperary> .
+<http://www.fake.com/cs7is1-project#Tipperary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Tyrone> .
+<http://www.fake.com/cs7is1-project#Tyrone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Waterford> .
+<http://www.fake.com/cs7is1-project#Waterford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Westmeath> .
+<http://www.fake.com/cs7is1-project#Westmeath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Wexford> .
+<http://www.fake.com/cs7is1-project#Wexford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Wicklow> .
+<http://www.fake.com/cs7is1-project#Wicklow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.fake.com/cs7is1-project#CountyName> <http://www.w3.org/2000/01/rdf-schema#comment> "Ireland County Name" .
+<http://www.fake.com/cs7is1-project#CountyName> <http://www.w3.org/2000/01/rdf-schema#label> "County Name" .
+# 
+# http://www.fake.com/cs7is1-project#December
+<http://www.fake.com/cs7is1-project#December> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#December> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Derry
+<http://www.fake.com/cs7is1-project#Derry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Derry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Donegal
+<http://www.fake.com/cs7is1-project#Donegal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Donegal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Down
+<http://www.fake.com/cs7is1-project#Down> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Down> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Dublin
+<http://www.fake.com/cs7is1-project#Dublin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Dublin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#February
+<http://www.fake.com/cs7is1-project#February> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#February> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Fermanagh
+<http://www.fake.com/cs7is1-project#Fermanagh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Fermanagh> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Galway
+<http://www.fake.com/cs7is1-project#Galway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Galway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#GridSquareLocation
+<http://www.fake.com/cs7is1-project#GridSquareLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#GridSquareLocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#easting> .
+_:genid36 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#GridSquareLocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#northing> .
+_:genid37 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#GridSquareLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Geographic Location using Eastings Northings notation" .
+<http://www.fake.com/cs7is1-project#GridSquareLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Grid Square Location" .
+# 
+# http://www.fake.com/cs7is1-project#January
+<http://www.fake.com/cs7is1-project#January> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#January> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#July
+<http://www.fake.com/cs7is1-project#July> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#July> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#June
+<http://www.fake.com/cs7is1-project#June> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#June> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Kerry
+<http://www.fake.com/cs7is1-project#Kerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Kerry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Kildare
+<http://www.fake.com/cs7is1-project#Kildare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Kildare> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Kilkenny
+<http://www.fake.com/cs7is1-project#Kilkenny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Kilkenny> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Laois
+<http://www.fake.com/cs7is1-project#Laois> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Laois> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#LatLongLocation
+<http://www.fake.com/cs7is1-project#LatLongLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#LatLongLocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#LocatedIn> .
+_:genid38 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#LatLongLocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#latitude> .
+_:genid39 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#LatLongLocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#longitude> .
+_:genid40 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#LatLongLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Geographic Location using Latitude and Longitude" .
+<http://www.fake.com/cs7is1-project#LatLongLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Latitude Longitude Location" .
+# 
+# http://www.fake.com/cs7is1-project#Leitrim
+<http://www.fake.com/cs7is1-project#Leitrim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Leitrim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Limerick
+<http://www.fake.com/cs7is1-project#Limerick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Limerick> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Longford
+<http://www.fake.com/cs7is1-project#Longford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Longford> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Louth
+<http://www.fake.com/cs7is1-project#Louth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Louth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#March
+<http://www.fake.com/cs7is1-project#March> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#March> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#May
+<http://www.fake.com/cs7is1-project#May> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#May> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Mayo
+<http://www.fake.com/cs7is1-project#Mayo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Mayo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Meath
+<http://www.fake.com/cs7is1-project#Meath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Meath> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Monaghan
+<http://www.fake.com/cs7is1-project#Monaghan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Monaghan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#MonthName
+<http://www.fake.com/cs7is1-project#MonthName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#MonthName> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid41 <http://www.w3.org/2002/07/owl#oneOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#April> .
+<http://www.fake.com/cs7is1-project#April> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#August> .
+<http://www.fake.com/cs7is1-project#August> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#December> .
+<http://www.fake.com/cs7is1-project#December> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#February> .
+<http://www.fake.com/cs7is1-project#February> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#January> .
+<http://www.fake.com/cs7is1-project#January> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#July> .
+<http://www.fake.com/cs7is1-project#July> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#June> .
+<http://www.fake.com/cs7is1-project#June> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#March> .
+<http://www.fake.com/cs7is1-project#March> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#May> .
+<http://www.fake.com/cs7is1-project#May> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#Novemeber> .
+<http://www.fake.com/cs7is1-project#Novemeber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#October> .
+<http://www.fake.com/cs7is1-project#October> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.fake.com/cs7is1-project#September> .
+<http://www.fake.com/cs7is1-project#September> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.fake.com/cs7is1-project#MonthName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of Month" .
+<http://www.fake.com/cs7is1-project#MonthName> <http://www.w3.org/2000/01/rdf-schema#label> "Month Name" .
+# 
+# http://www.fake.com/cs7is1-project#Novemeber
+<http://www.fake.com/cs7is1-project#Novemeber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Novemeber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#October
+<http://www.fake.com/cs7is1-project#October> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#October> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Offaly
+<http://www.fake.com/cs7is1-project#Offaly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Offaly> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#RainfallRecord
+<http://www.fake.com/cs7is1-project#RainfallRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#RainfallRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#WeatherRecord> .
+<http://www.fake.com/cs7is1-project#RainfallRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Weather record containing rainfall information" .
+<http://www.fake.com/cs7is1-project#RainfallRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Rainfall Record" .
+# 
+# http://www.fake.com/cs7is1-project#Roscommon
+<http://www.fake.com/cs7is1-project#Roscommon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Roscommon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#September
+<http://www.fake.com/cs7is1-project#September> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#September> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#MonthName> .
+# 
+# http://www.fake.com/cs7is1-project#Sligo
+<http://www.fake.com/cs7is1-project#Sligo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Sligo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#TemperatureRecord
+<http://www.fake.com/cs7is1-project#TemperatureRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#TemperatureRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#WeatherRecord> .
+<http://www.fake.com/cs7is1-project#TemperatureRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Weather record containing temperature information" .
+<http://www.fake.com/cs7is1-project#TemperatureRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature Record" .
+# 
+# http://www.fake.com/cs7is1-project#Tipperary
+<http://www.fake.com/cs7is1-project#Tipperary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Tipperary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Tyrone
+<http://www.fake.com/cs7is1-project#Tyrone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Tyrone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Waterford
+<http://www.fake.com/cs7is1-project#Waterford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Waterford> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#WeatherRecord
+<http://www.fake.com/cs7is1-project#WeatherRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#WeatherRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#monthRained> .
+_:genid54 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#WeatherRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#rainedAt> .
+_:genid55 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#WeatherRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Record Containing Weather Information." .
+<http://www.fake.com/cs7is1-project#WeatherRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Weather Record" .
+# 
+# http://www.fake.com/cs7is1-project#WeatherStation
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#closeYear> .
+_:genid56 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#height> .
+_:genid57 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#openYear> .
+_:genid58 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#stationName> .
+_:genid59 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://www.fake.com/cs7is1-project#stationNumber> .
+_:genid60 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Weather Station contains details about a specific weather station." .
+<http://www.fake.com/cs7is1-project#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#label> "Weather Station" .
+# 
+# http://www.fake.com/cs7is1-project#Westmeath
+<http://www.fake.com/cs7is1-project#Westmeath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Westmeath> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Wexford
+<http://www.fake.com/cs7is1-project#Wexford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Wexford> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# http://www.fake.com/cs7is1-project#Wicklow
+<http://www.fake.com/cs7is1-project#Wicklow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.fake.com/cs7is1-project#Wicklow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.fake.com/cs7is1-project#CountyName> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.fake.com/cs7is1-project#Antrim
+# 
+# http://www.fake.com/cs7is1-project#April
+# 
+# http://www.fake.com/cs7is1-project#Armagh
+# 
+# http://www.fake.com/cs7is1-project#August
+# 
+# http://www.fake.com/cs7is1-project#Carlow
+# 
+# http://www.fake.com/cs7is1-project#Cavan
+# 
+# http://www.fake.com/cs7is1-project#Clare
+# 
+# http://www.fake.com/cs7is1-project#Cork
+# 
+# http://www.fake.com/cs7is1-project#December
+# 
+# http://www.fake.com/cs7is1-project#Derry
+# 
+# http://www.fake.com/cs7is1-project#Donegal
+# 
+# http://www.fake.com/cs7is1-project#Down
+# 
+# http://www.fake.com/cs7is1-project#Dublin
+# 
+# http://www.fake.com/cs7is1-project#February
+# 
+# http://www.fake.com/cs7is1-project#Fermanagh
+# 
+# http://www.fake.com/cs7is1-project#Galway
+# 
+# http://www.fake.com/cs7is1-project#January
+# 
+# http://www.fake.com/cs7is1-project#July
+# 
+# http://www.fake.com/cs7is1-project#June
+# 
+# http://www.fake.com/cs7is1-project#Kerry
+# 
+# http://www.fake.com/cs7is1-project#Kildare
+# 
+# http://www.fake.com/cs7is1-project#Kilkenny
+# 
+# http://www.fake.com/cs7is1-project#Laois
+# 
+# http://www.fake.com/cs7is1-project#Leitrim
+# 
+# http://www.fake.com/cs7is1-project#Limerick
+# 
+# http://www.fake.com/cs7is1-project#Longford
+# 
+# http://www.fake.com/cs7is1-project#Louth
+# 
+# http://www.fake.com/cs7is1-project#March
+# 
+# http://www.fake.com/cs7is1-project#May
+# 
+# http://www.fake.com/cs7is1-project#Mayo
+# 
+# http://www.fake.com/cs7is1-project#Meath
+# 
+# http://www.fake.com/cs7is1-project#Monaghan
+# 
+# http://www.fake.com/cs7is1-project#Novemeber
+# 
+# http://www.fake.com/cs7is1-project#October
+# 
+# http://www.fake.com/cs7is1-project#Offaly
+# 
+# http://www.fake.com/cs7is1-project#Roscommon
+# 
+# http://www.fake.com/cs7is1-project#September
+# 
+# http://www.fake.com/cs7is1-project#Sligo
+# 
+# http://www.fake.com/cs7is1-project#Tipperary
+# 
+# http://www.fake.com/cs7is1-project#Tyrone
+# 
+# http://www.fake.com/cs7is1-project#Waterford
+# 
+# http://www.fake.com/cs7is1-project#Westmeath
+# 
+# http://www.fake.com/cs7is1-project#Wexford
+# 
+# http://www.fake.com/cs7is1-project#Wicklow
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.fake.com/cs7is1-project#Antrim> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Antrim> <http://www.w3.org/2000/01/rdf-schema#label> "Antrim" .
+# 
+<http://www.fake.com/cs7is1-project#April> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#April> <http://www.w3.org/2000/01/rdf-schema#label> "April" .
+# 
+<http://www.fake.com/cs7is1-project#Armagh> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Armagh> <http://www.w3.org/2000/01/rdf-schema#label> "Armagh" .
+# 
+<http://www.fake.com/cs7is1-project#August> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#August> <http://www.w3.org/2000/01/rdf-schema#label> "August" .
+# 
+<http://www.fake.com/cs7is1-project#Carlow> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Carlow> <http://www.w3.org/2000/01/rdf-schema#label> "Carlow" .
+# 
+<http://www.fake.com/cs7is1-project#Cavan> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Cavan> <http://www.w3.org/2000/01/rdf-schema#label> "Cavan" .
+# 
+<http://www.fake.com/cs7is1-project#Clare> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Clare> <http://www.w3.org/2000/01/rdf-schema#label> "Clare" .
+# 
+<http://www.fake.com/cs7is1-project#Cork> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Cork> <http://www.w3.org/2000/01/rdf-schema#label> "Cork" .
+# 
+<http://www.fake.com/cs7is1-project#December> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#December> <http://www.w3.org/2000/01/rdf-schema#label> "December" .
+# 
+<http://www.fake.com/cs7is1-project#Derry> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Derry> <http://www.w3.org/2000/01/rdf-schema#label> "Derry" .
+# 
+<http://www.fake.com/cs7is1-project#Donegal> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Donegal> <http://www.w3.org/2000/01/rdf-schema#label> "Donegal" .
+# 
+<http://www.fake.com/cs7is1-project#Down> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Down> <http://www.w3.org/2000/01/rdf-schema#label> "Down" .
+# 
+<http://www.fake.com/cs7is1-project#Dublin> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Dublin> <http://www.w3.org/2000/01/rdf-schema#label> "Dublin" .
+# 
+<http://www.fake.com/cs7is1-project#February> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#February> <http://www.w3.org/2000/01/rdf-schema#label> "February" .
+# 
+<http://www.fake.com/cs7is1-project#Fermanagh> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Fermanagh> <http://www.w3.org/2000/01/rdf-schema#label> "Fermanagh" .
+# 
+<http://www.fake.com/cs7is1-project#Galway> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Galway> <http://www.w3.org/2000/01/rdf-schema#label> "Galway" .
+# 
+<http://www.fake.com/cs7is1-project#January> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#January> <http://www.w3.org/2000/01/rdf-schema#label> "January" .
+# 
+<http://www.fake.com/cs7is1-project#July> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#July> <http://www.w3.org/2000/01/rdf-schema#label> "July" .
+# 
+<http://www.fake.com/cs7is1-project#June> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#June> <http://www.w3.org/2000/01/rdf-schema#label> "June" .
+# 
+<http://www.fake.com/cs7is1-project#Kerry> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Kerry> <http://www.w3.org/2000/01/rdf-schema#label> "Kerry" .
+# 
+<http://www.fake.com/cs7is1-project#Kildare> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Kildare> <http://www.w3.org/2000/01/rdf-schema#label> "Kildare" .
+# 
+<http://www.fake.com/cs7is1-project#Kilkenny> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Kilkenny> <http://www.w3.org/2000/01/rdf-schema#label> "Kilkenny" .
+# 
+<http://www.fake.com/cs7is1-project#Laois> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Laois> <http://www.w3.org/2000/01/rdf-schema#label> "Laois" .
+# 
+<http://www.fake.com/cs7is1-project#Leitrim> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Leitrim> <http://www.w3.org/2000/01/rdf-schema#label> "Leitrim" .
+# 
+<http://www.fake.com/cs7is1-project#Limerick> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Limerick> <http://www.w3.org/2000/01/rdf-schema#label> "Limerick" .
+# 
+<http://www.fake.com/cs7is1-project#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies if a lat long location is located in a County" .
+<http://www.fake.com/cs7is1-project#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Located In" .
+# 
+<http://www.fake.com/cs7is1-project#Longford> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Longford> <http://www.w3.org/2000/01/rdf-schema#label> "Longford" .
+# 
+<http://www.fake.com/cs7is1-project#Louth> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Louth> <http://www.w3.org/2000/01/rdf-schema#label> "Louth" .
+# 
+<http://www.fake.com/cs7is1-project#March> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#March> <http://www.w3.org/2000/01/rdf-schema#label> "March" .
+# 
+<http://www.fake.com/cs7is1-project#May> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#May> <http://www.w3.org/2000/01/rdf-schema#label> "May" .
+# 
+<http://www.fake.com/cs7is1-project#Mayo> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Mayo> <http://www.w3.org/2000/01/rdf-schema#label> "Mayo" .
+# 
+<http://www.fake.com/cs7is1-project#Meath> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Meath> <http://www.w3.org/2000/01/rdf-schema#label> "Meath" .
+# 
+<http://www.fake.com/cs7is1-project#Monaghan> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Monaghan> <http://www.w3.org/2000/01/rdf-schema#label> "Monaghan" .
+# 
+<http://www.fake.com/cs7is1-project#Novemeber> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#Novemeber> <http://www.w3.org/2000/01/rdf-schema#label> "November" .
+# 
+<http://www.fake.com/cs7is1-project#October> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#October> <http://www.w3.org/2000/01/rdf-schema#label> "October" .
+# 
+<http://www.fake.com/cs7is1-project#Offaly> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Offaly> <http://www.w3.org/2000/01/rdf-schema#label> "Offaly" .
+# 
+<http://www.fake.com/cs7is1-project#Roscommon> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Roscommon> <http://www.w3.org/2000/01/rdf-schema#label> "Roscommon" .
+# 
+<http://www.fake.com/cs7is1-project#September> <http://www.w3.org/2000/01/rdf-schema#comment> "Month Name" .
+<http://www.fake.com/cs7is1-project#September> <http://www.w3.org/2000/01/rdf-schema#label> "September" .
+# 
+<http://www.fake.com/cs7is1-project#Sligo> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Sligo> <http://www.w3.org/2000/01/rdf-schema#label> "Sligo" .
+# 
+<http://www.fake.com/cs7is1-project#Tipperary> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Tipperary> <http://www.w3.org/2000/01/rdf-schema#label> "Tipperary" .
+# 
+<http://www.fake.com/cs7is1-project#Tyrone> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Tyrone> <http://www.w3.org/2000/01/rdf-schema#label> "Tyrone" .
+# 
+<http://www.fake.com/cs7is1-project#Waterford> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Waterford> <http://www.w3.org/2000/01/rdf-schema#label> "Waterford" .
+# 
+<http://www.fake.com/cs7is1-project#Westmeath> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Westmeath> <http://www.w3.org/2000/01/rdf-schema#label> "Westmeath" .
+# 
+<http://www.fake.com/cs7is1-project#Wexford> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Wexford> <http://www.w3.org/2000/01/rdf-schema#label> "Wexford" .
+# 
+<http://www.fake.com/cs7is1-project#Wicklow> <http://www.w3.org/2000/01/rdf-schema#comment> "County in Ireland" .
+<http://www.fake.com/cs7is1-project#Wicklow> <http://www.w3.org/2000/01/rdf-schema#label> "Wicklow" .
+# 
+<http://www.fake.com/cs7is1-project#countyIsNamed> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the name of a County" .
+<http://www.fake.com/cs7is1-project#countyIsNamed> <http://www.w3.org/2000/01/rdf-schema#label> "county is named" .
+# 
+<http://www.fake.com/cs7is1-project#locatedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a geographical Location" .
+<http://www.fake.com/cs7is1-project#locatedAt> <http://www.w3.org/2000/01/rdf-schema#label> "Located at" .
+# 
+<http://www.fake.com/cs7is1-project#monthRained> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the month of a Weather Record" .
+<http://www.fake.com/cs7is1-project#monthRained> <http://www.w3.org/2000/01/rdf-schema#label> "month rained" .
+# 
+<http://www.fake.com/cs7is1-project#rainedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the location of a Weather Record" .
+<http://www.fake.com/cs7is1-project#rainedAt> <http://www.w3.org/2000/01/rdf-schema#label> "rained at" .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

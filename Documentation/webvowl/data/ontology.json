@@ -1,0 +1,2370 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.fake.com/cs7is1-project" ],
+    "iri" : "http://www.fake.com/cs7is1-project",
+    "author" : [ "Patrick Meleady", "Caitriona O'Driscoll", "Stephen Kelehan", "Yash Mundra" ],
+    "description" : {
+      "undefined" : "Ireland weather station information, with county information along with rainfall and temperature information.Weather Stations have several properties including open year, close year and height. They also have properties named LocatedIn which provides location information in two seperate formats namely Latitude andLongitude and Eastings Northings format."
+    },
+    "labels" : {
+      "undefined" : "ireland-weather-station-county"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Caitriona O'Driscoll",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Yash Mundra",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Patrick Meleady",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Stephen Kelehan",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 54,
+    "objectPropertyCount" : 8,
+    "datatypePropertyCount" : 19,
+    "individualCount" : 44
+  },
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "142",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "144",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "147",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "151",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "136",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.fake.com/cs7is1-project#Mayo",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mayo",
+      "undefined" : "Mayo"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Cork",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cork",
+      "undefined" : "Cork"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "5",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#February",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "February",
+      "undefined" : "February"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#March",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "March",
+      "undefined" : "March"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "11",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Laois",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Laois",
+      "undefined" : "Laois"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "19",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Novemeber",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Novemeber",
+      "undefined" : "November"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "23",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Wexford",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Wexford",
+      "undefined" : "Wexford"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "37",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Waterford",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Waterford",
+      "undefined" : "Waterford"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "44",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Offaly",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Offaly",
+      "undefined" : "Offaly"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "48",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Leitrim",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Leitrim",
+      "undefined" : "Leitrim"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "49",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Cavan",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cavan",
+      "undefined" : "Cavan"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "50",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#January",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "January",
+      "undefined" : "January"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "26",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Armagh",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Armagh",
+      "undefined" : "Armagh"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "56",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#WeatherRecord",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WeatherRecord",
+      "undefined" : "Weather Record"
+    },
+    "subClasses" : [ "47", "17" ],
+    "comment" : {
+      "undefined" : "Record Containing Weather Information."
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Donegal",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Donegal",
+      "undefined" : "Donegal"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "59",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#October",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "October",
+      "undefined" : "October"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "13",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Longford",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Longford",
+      "undefined" : "Longford"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "61",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#MonthName",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 12,
+    "label" : {
+      "IRI-based" : "MonthName",
+      "undefined" : "Month Name"
+    },
+    "subClasses" : [ "21", "23", "8", "26", "11", "29", "34", "36", "13", "15", "3", "7" ],
+    "comment" : {
+      "undefined" : "Name of Month"
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Sligo",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sligo",
+      "undefined" : "Sligo"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "64",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Kerry",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Kerry",
+      "undefined" : "Kerry"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "65",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#TemperatureRecord",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TemperatureRecord",
+      "undefined" : "Temperature Record"
+    },
+    "comment" : {
+      "undefined" : "Weather record containing temperature information"
+    },
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Carlow",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Carlow",
+      "undefined" : "Carlow"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "66",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Wicklow",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Wicklow",
+      "undefined" : "Wicklow"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "67",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#May",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "May",
+      "undefined" : "May"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Limerick",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Limerick",
+      "undefined" : "Limerick"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "68",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Kilkenny",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Kilkenny",
+      "undefined" : "Kilkenny"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "71",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Monaghan",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Monaghan",
+      "undefined" : "Monaghan"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "72",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Clare",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Clare",
+      "undefined" : "Clare"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "73",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Antrim",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Antrim",
+      "undefined" : "Antrim"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "74",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Fermanagh",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fermanagh",
+      "undefined" : "Fermanagh"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "75",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#LatLongLocation",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LatLongLocation",
+      "undefined" : "Latitude Longitude Location"
+    },
+    "comment" : {
+      "undefined" : "Geographic Location using Latitude and Longitude"
+    },
+    "id" : "31"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#September",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "September",
+      "undefined" : "September"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "7",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Down",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Down",
+      "undefined" : "Down"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "79",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Tyrone",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tyrone",
+      "undefined" : "Tyrone"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "80",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#CountyName",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 32,
+    "label" : {
+      "IRI-based" : "CountyName",
+      "undefined" : "County Name"
+    },
+    "subClasses" : [ "0", "5", "82", "48", "83", "79", "59", "80", "61", "71", "64", "84", "72", "65", "66", "49", "67", "85", "86", "87", "19", "50", "74", "73", "68", "88", "75", "89", "56", "43", "37", "44" ],
+    "comment" : {
+      "undefined" : "Ireland County Name"
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Louth",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Louth",
+      "undefined" : "Louth"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "85",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "109",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#December",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "December",
+      "undefined" : "December"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "36",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Tipperary",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tipperary",
+      "undefined" : "Tipperary"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "84",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "114",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "115",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Dublin",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dublin",
+      "undefined" : "Dublin"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "87",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "111",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Galway",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Galway",
+      "undefined" : "Galway"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "88",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#August",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "August",
+      "undefined" : "August"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "29",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#June",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "June",
+      "undefined" : "June"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "15",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "141",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "142",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "143",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "144",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "145",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "137",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "146",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "147",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#July",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "July",
+      "undefined" : "July"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "21",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Kildare",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Kildare",
+      "undefined" : "Kildare"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "89",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "150",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "151",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "136",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Derry",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Derry",
+      "undefined" : "Derry"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "43",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "152",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "153",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Westmeath",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Westmeath",
+      "undefined" : "Westmeath"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "82",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Roscommon",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Roscommon",
+      "undefined" : "Roscommon"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "83",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#GridSquareLocation",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GridSquareLocation",
+      "undefined" : "Grid Square Location"
+    },
+    "comment" : {
+      "undefined" : "Geographic Location using Eastings Northings notation"
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#WeatherStation",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WeatherStation",
+      "undefined" : "Weather Station"
+    },
+    "comment" : {
+      "undefined" : "Weather Station contains details about a specific weather station."
+    },
+    "id" : "39"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#Meath",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Meath",
+      "undefined" : "Meath"
+    },
+    "comment" : {
+      "undefined" : "County in Ireland"
+    },
+    "id" : "86",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#County",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "County",
+      "undefined" : "County"
+    },
+    "comment" : {
+      "undefined" : "Irish Counties"
+    },
+    "id" : "70"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#RainfallRecord",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RainfallRecord",
+      "undefined" : "Rainfall Record"
+    },
+    "comment" : {
+      "undefined" : "Weather record containing rainfall information"
+    },
+    "id" : "47",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#April",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "April",
+      "undefined" : "April"
+    },
+    "comment" : {
+      "undefined" : "Month Name"
+    },
+    "id" : "34",
+    "superClasses" : [ "4" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "81",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "90",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "91",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "92",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "93",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "94",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "95",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "96",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "97",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "98",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "99",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "100",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "101",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "102",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "103",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "104",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "105",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "106",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "107",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "108",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "117",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "120",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "121",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "122",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "123",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "124",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "125",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "126",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "127",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "128",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "129",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "130",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "158",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "163",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "164",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "165",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "166",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "167",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "168",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "169",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "170",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "171",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "172",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "179",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "182",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "184",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "2"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#adjacentTo",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "adjacentTo",
+      "undefined" : "adjacent to"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Specifies if a grid square is adjacent to another grid square."
+    },
+    "attributes" : [ "symmetric", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "4",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "4",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "4",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "4",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "4",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "4",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "4",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#longitude",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "longitude",
+      "undefined" : "longitude"
+    },
+    "cardinality" : "1",
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Geographic longitude"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "range" : "4",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "4",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#stationName",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "stationName",
+      "undefined" : "station name"
+    },
+    "cardinality" : "1",
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Name of Weather Station"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "38"
+  }, {
+    "range" : "1",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "1",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "1",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "18",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#openYear",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "openYear",
+      "undefined" : "open year"
+    },
+    "cardinality" : "1",
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Opening Year of Weather Station"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#rainedAt",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "rainedAt",
+      "undefined" : "rained at"
+    },
+    "cardinality" : "1",
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Specifies the location of a Weather Record"
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#easting",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "easting",
+      "undefined" : "easting"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Easting location"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#temperatureMin",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "temperatureMin",
+      "undefined" : "Temperature Minimum"
+    },
+    "domain" : "47",
+    "comment" : {
+      "undefined" : "Mean rainfall measured during timeframe"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#monthRained",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "monthRained",
+      "undefined" : "month rained"
+    },
+    "cardinality" : "1",
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Specifies the month of a Weather Record"
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#closeYear",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "closeYear",
+      "undefined" : "close year"
+    },
+    "cardinality" : "1",
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Closing Year of Weather Station"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#countyIsNamed",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "countyIsNamed",
+      "undefined" : "county is named"
+    },
+    "cardinality" : "1",
+    "domain" : "70",
+    "comment" : {
+      "undefined" : "Specifies the name of a County"
+    },
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#temperatureMean",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "temperatureMean",
+      "undefined" : "Temperature Mean"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Mean Temperature measured during timeframe"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "domain" : "1",
+    "range" : "37",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "30",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "82",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "29",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "44",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "28",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "64",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "25",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "83",
+    "id" : "92",
+    "label" : {
+      "IRI-based" : "24",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "80",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "27",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "84",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "26",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "86",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "21",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "0",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "20",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "48",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "23",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "72",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "22",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "61",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "18",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "68",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "17",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "85",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "19",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "71",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "14",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "89",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "13",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "49",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "16",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "19",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "15",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "75",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "10",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "65",
+    "id" : "107",
+    "label" : {
+      "IRI-based" : "12",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "88",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "11",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#area",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "111",
+    "label" : {
+      "IRI-based" : "area",
+      "undefined" : "area"
+    },
+    "cardinality" : "1",
+    "domain" : "70",
+    "comment" : {
+      "undefined" : "Surface Area of a County"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#lowerThan",
+    "inverse" : "113",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "lowerThan",
+      "undefined" : "Lower Than"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "List other stations which this station is lower than."
+    },
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "112"
+  }, {
+    "domain" : "4",
+    "range" : "7",
+    "id" : "116",
+    "label" : {
+      "IRI-based" : "43",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "13",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "42",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#locatedAt",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "locatedAt",
+      "undefined" : "Located at"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Specifies a geographical Location"
+    },
+    "attributes" : [ "object" ],
+    "id" : "118"
+  }, {
+    "domain" : "4",
+    "range" : "23",
+    "id" : "119",
+    "label" : {
+      "IRI-based" : "41",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "3",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "40",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#latitude",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "115",
+    "label" : {
+      "IRI-based" : "latitude",
+      "undefined" : "latitude"
+    },
+    "cardinality" : "1",
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Geographic latitude"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "121"
+  }, {
+    "domain" : "4",
+    "range" : "11",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "39",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "26",
+    "id" : "123",
+    "label" : {
+      "IRI-based" : "36",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "8",
+    "id" : "124",
+    "label" : {
+      "IRI-based" : "35",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "15",
+    "id" : "125",
+    "label" : {
+      "IRI-based" : "38",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "21",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "37",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "34",
+    "id" : "127",
+    "label" : {
+      "IRI-based" : "32",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "67",
+    "id" : "128",
+    "label" : {
+      "IRI-based" : "31",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "36",
+    "id" : "129",
+    "label" : {
+      "IRI-based" : "34",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "4",
+    "range" : "29",
+    "id" : "130",
+    "label" : {
+      "IRI-based" : "33",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "1",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "1",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "1",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "133"
+  }, {
+    "range" : "1",
+    "domain" : "79",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#rainfall",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "rainfall"
+    },
+    "domain" : "136",
+    "attributes" : [ "datatype" ],
+    "id" : "135"
+  }, {
+    "range" : "1",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "range" : "1",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "139"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#higherThan",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "higherThan",
+      "undefined" : "Higher Than"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "List other stations which this station is higher than."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#northing",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "109",
+    "label" : {
+      "IRI-based" : "northing",
+      "undefined" : "northing"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Northing location"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "148"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#height",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "height",
+      "undefined" : "height"
+    },
+    "cardinality" : "1",
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Geographical elevation of weather station."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#temperatureMax",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "152",
+    "label" : {
+      "IRI-based" : "temperatureMax",
+      "undefined" : "Temperature Maximum"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Maximum Temperature measured during timeframe"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "154"
+  }, {
+    "range" : "1",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "155"
+  }, {
+    "range" : "1",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "156"
+  }, {
+    "range" : "1",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#LocatedIn",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "LocatedIn",
+      "undefined" : "Located In"
+    },
+    "cardinality" : "1",
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Specifies if a lat long location is located in a County"
+    },
+    "attributes" : [ "object" ],
+    "id" : "158"
+  }, {
+    "range" : "1",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "1",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "1",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "161"
+  }, {
+    "range" : "1",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "162"
+  }, {
+    "domain" : "1",
+    "range" : "66",
+    "id" : "163",
+    "label" : {
+      "IRI-based" : "2",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "50",
+    "id" : "164",
+    "label" : {
+      "IRI-based" : "3",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "73",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "4",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "5",
+    "id" : "166",
+    "label" : {
+      "IRI-based" : "5",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "43",
+    "id" : "167",
+    "label" : {
+      "IRI-based" : "6",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "59",
+    "id" : "168",
+    "label" : {
+      "IRI-based" : "7",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "79",
+    "id" : "169",
+    "label" : {
+      "IRI-based" : "8",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "87",
+    "id" : "170",
+    "label" : {
+      "IRI-based" : "9",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "74",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "0",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "56",
+    "id" : "172",
+    "label" : {
+      "IRI-based" : "1",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "1",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "1",
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "iri" : "http://www.fake.com/cs7is1-project#stationNumber",
+    "baseIri" : "http://www.fake.com/cs7is1-project",
+    "range" : "153",
+    "label" : {
+      "IRI-based" : "stationNumber",
+      "undefined" : "station number"
+    },
+    "cardinality" : "1",
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "ID Number of Weather Station"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "175"
+  }, {
+    "range" : "1",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "176"
+  }, {
+    "range" : "1",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "177"
+  }, {
+    "range" : "1",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "178"
+  }, {
+    "range" : "1",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "179"
+  }, {
+    "range" : "1",
+    "domain" : "85",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "180"
+  }, {
+    "range" : "1",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "181"
+  }, {
+    "range" : "1",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "182"
+  }, {
+    "range" : "1",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "183"
+  }, {
+    "range" : "1",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "184"
+  }, {
+    "range" : "1",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "185"
+  }, {
+    "range" : "1",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "186"
+  }, {
+    "range" : "1",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "187"
+  }, {
+    "range" : "1",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "188"
+  } ]
+}
