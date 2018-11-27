@@ -781,12 +781,13 @@ public class OntologyMaker {
 
             ArrayList<Individual> weatherStationList = new ArrayList<>();
 
-            for (CSVRecord record : records) {
+            for (int ind = 0; ind < records.size(); ind+=50) {
+                CSVRecord record = records.get(ind);
                 int aStationID = Integer.parseInt(record.get(1));
                 String aStationName = record.get(2);
                 int aStationHeight = Integer.parseInt(record.get(3));
-                int aEasting = Integer.parseInt(record.get(4));
-                int aNorthing = Integer.parseInt(record.get(5));
+                int aEasting = (Integer.parseInt(record.get(4)) + 500) / 1000 * 1000;
+                int aNorthing = (Integer.parseInt(record.get(5))+ 500) / 1000 * 1000;
                 float aLatitude = Float.parseFloat(record.get(6));
                 float aLongitude = Float.parseFloat(record.get(7));
                 int aOpenYear = Integer.parseInt(record.get(8));
@@ -929,7 +930,7 @@ public class OntologyMaker {
                         currentLocation = currentGridSquare;
                         validLocation = true;
                     }
-                    else if(Math.abs(currentGridSquare.getProperty(easting).getInt()-aEasting)<1100 || Math.abs(currentGridSquare.getProperty(northing).getInt() - aNorthing)<1100){
+                    else if(Math.abs(currentGridSquare.getProperty(easting).getInt()-aEasting)<=1000 && Math.abs(currentGridSquare.getProperty(northing).getInt() - aNorthing)<1000){
                         adjacentLocation = currentGridSquare;
                         validLocation = true;
                     }
