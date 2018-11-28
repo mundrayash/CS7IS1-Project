@@ -2,14 +2,17 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX base: <http://www.cs7is1.com/ireland-school-county#>
+PREFIX base: <http://www.fake.com/cs7is1-project#>
 
-SELECT ?county (COUNT(?station) AS ?count)
+SELECT ?station ?rainfall
 WHERE {
-    ?station base:located_in base:Galway.
-    ?station base:Open_Year ?openyear.
-    ?rainfall base:Rain_Amount base:March.
+    ?station base:locatedAt ?grid.
+    ?station base:locatedAt ?latlong.
+    ?latlong base:LocatedIn base:Mayo.
+    ?station base:openYear ?openyear.
+    ?rainRecord base:happenedAt ?grid.
+    ?rainRecord base:monthHappened base:March.
+    ?rainRecord base:rainfall ?rainfall.
 }
-GROUP BY ?county
-ORDER BY ASC (?openyear)
+ORDER BY ?openyear
 LIMIT 1
