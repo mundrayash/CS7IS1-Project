@@ -26,7 +26,7 @@ import java.util.zip.ZipInputStream;
 public class OntologyMaker {
     private final static String URI_BASE = "http://www.fake.com/cs7is1-project";
     private final static String NAMESPACE = URI_BASE + "#";
-    private final static String ONTOLOGY_PATH = "files/ontologyFile.ttl";
+    public final static String ONTOLOGY_PATH = "files/ontologyFile.ttl";
     private static final String COUNTY_URL = "http://data.geohive.ie/dumps/county/default.ttl";
     private static final String COUNTY_PATH = "files/county.ttl";
     private static final String STATION_URL = "https://cli.fusio.net/cli/climate_data/webdata/StationDetails.csv";
@@ -378,9 +378,9 @@ public class OntologyMaker {
         wicklow.addLabel("Wicklow", null);
         wicklow.addComment("County in Ireland", null);
 
-        RDFList countyList = model.createList(new RDFNode[]{antrim, armagh, carlow, cavan, clare, cork, derry, donegal, down,
-                dublin, fermanagh, galway, kerry, kildare, kilkenny, laois, leitrim, limerick, longford, louth, mayo, meath,
-                monaghan, offaly, roscommon, sligo, tipperary, tyrone, waterford, westmeath, wexford, wicklow});
+        RDFList countyList = model.createList(new RDFNode[]{carlow, cavan, clare, cork, donegal,
+                dublin, galway, kerry, kildare, kilkenny, laois, leitrim, limerick, longford, louth, mayo, meath,
+                monaghan, offaly, roscommon, sligo, tipperary, waterford, westmeath, wexford, wicklow});
 
         OntClass countyName = model.createEnumeratedClass(NAMESPACE + "CountyName", countyList);
         countyName.addLabel("County Name", null);
