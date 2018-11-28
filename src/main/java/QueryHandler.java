@@ -16,7 +16,7 @@ public class QueryHandler {
 
     public QueryHandler() throws IOException {
         ontModel = ModelFactory.createOntologyModel();
-        ontModel.read("ontologyFile.ttl");
+        ontModel.read(OntologyMaker.ONTOLOGY_PATH);
 
         File directory = new File(getClass().getResource("sparql_queries").getFile());
         File[] files = directory.listFiles();
