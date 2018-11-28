@@ -4,9 +4,13 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX base: <http://www.fake.com/cs7is1-project#>
 
-SELECT Distinct ?station
+SELECT Distinct ?monthName ?temperatureMax
 WHERE {
-    ?station base:locatedAt ?location.
-    ?location base:LocatedIn base:Cork.
+        ?station base:locatedAt ?grid.
+        ?station base:locatedAt ?latlong.
+        ?latlong base:LocatedIn base:Galway.
+        ?temperatureRecord base:happenedAt ?grid.
+        ?temperatureRecord base:monthHappened ?monthName.
+        ?temperatureRecord base:temperatureMax ?temperatureMax.
 }
-LIMIT 100
+LIMIT 1

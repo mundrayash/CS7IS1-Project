@@ -1,1 +1,1 @@
-Find all stations that cork contains
+Find the month with the maximum temperature for county Galway
