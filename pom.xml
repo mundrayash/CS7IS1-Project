@@ -25,5 +25,12 @@
             <artifactId>jena-arq</artifactId>
             <version>3.9.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.esri.geometry/esri-geometry-api -->
+        <dependency>
+            <groupId>com.esri.geometry</groupId>
+            <artifactId>esri-geometry-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 </project>

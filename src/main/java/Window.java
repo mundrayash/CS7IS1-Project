@@ -13,9 +13,11 @@ import java.util.Arrays;
 
 public class Window extends JFrame{
     private String[] questions;
+    private QueryHandler handler;
 
     public Window() throws IOException {
         prepareGUI();
+        handler = new QueryHandler();
     }
 
     public void launchWindow() {
@@ -52,8 +54,9 @@ public class Window extends JFrame{
 
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                int idx = questionList.getSelectedIndex();
-                resultTextArea.setText("Work in progress!!");
+                int index = questionList.getSelectedIndex();
+                String result = handler.execute(index);
+                resultTextArea.setText(result);
             }
         });
 
