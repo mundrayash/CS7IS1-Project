@@ -30,31 +30,14 @@ public class QueryHandler {
 
     }
 
-//    public String execute(int index)
-//    {
-//        String question = sparqlQueries[index];
-//        Query query = QueryFactory.create(question);
-//        QueryExecution execution = QueryExecutionFactory.create(query, ontModel);
-//        ResultSet resultSet = execution.execSelect();
-//        String result = ResultSetFormatter.asText(resultSet);
-//        execution.close();
-//        return result;
-//    }
-
-    public String executeQuery(int idx) {
-        String questionTxt = sparqlQueries[idx];
-        return queryWithTxt(questionTxt);
+    public String execute(int index)
+    {
+        String question = sparqlQueries[index];
+        QueryExecution execution = QueryExecutionFactory.create(question, ontModel);
+        ResultSet resultSet = execution.execSelect();
+        String result = ResultSetFormatter.asText(resultSet);
+        execution.close();
+        return result;
     }
 
-    private String queryWithTxt(String queryString) {
-        Query query = QueryFactory.create(queryString);
-        QueryExecution queryExecution = QueryExecutionFactory.create(query, ontModel);
-//        QueryExecution queryExecutionFactory = QueryExecutionFactory.create(queryString, ontModel);
-        ResultSet results = queryExecution.execSelect();
-
-        String resultTxt = ResultSetFormatter.asText(results);
-        queryExecution.close();
-
-        return resultTxt;
-    }
 }
