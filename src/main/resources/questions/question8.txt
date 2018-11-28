@@ -1,1 +1,1 @@
-What county had the least stations
+List 5 counties with the least number of stations

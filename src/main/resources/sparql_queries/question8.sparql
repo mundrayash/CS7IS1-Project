@@ -10,4 +10,5 @@ WHERE {
     ?location base:LocatedIn ?county.
 }
 GROUP BY ?county
-LIMIT 1
+Order BY ASC(?count)
+LIMIT 5

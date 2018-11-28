@@ -2,12 +2,11 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX base: <http://www.cs7is1.com/ireland-school-county#>
+PREFIX base: <http://www.fake.com/cs7is1-project#>
 
- 
-SELECT ((COUNT(?station))/?a AS ?density)
+SELECT Distinct ?station
 WHERE {
- ?cork base:contained_in base:station .
- base:cork base:boundries ?a
+    ?station base:locatedAt ?location.
+    ?location base:LocatedIn base:Cork.
 }
-GROUP BY ?a
+LIMIT 100
