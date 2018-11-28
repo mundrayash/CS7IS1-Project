@@ -4,8 +4,9 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX base:  <http://www.fake.com/cs7is1-project#>
 
-SELECT DISTINCT ?pred ?obj
+SELECT DISTINCT ?station ?county
 WHERE{
-    base:locatedAt ?pred ?obj.
+    ?station base:locatedAt ?location.
+    ?location base:LocatedIn ?county.
 }
 LIMIT 100
