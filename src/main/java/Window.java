@@ -55,7 +55,7 @@ public class Window extends JFrame{
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int index = questionList.getSelectedIndex();
-                String result = handler.execute(index);
+                String result = handler.executeQuery(index);
                 resultTextArea.setText(result);
             }
         });
