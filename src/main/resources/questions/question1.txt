@@ -1,2 +1,2 @@
-What county has the most stations
+List all stations and the county they are located in.
 
